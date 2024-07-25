@@ -1,0 +1,849 @@
+/* global */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* the container-div and ul-list and a tag */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none
+}
+
+/*
+Inter     : font-family: "Inter", sans-serif;
+
+system-ui : font-family: "system-ui", sans-serif;
+
+Amatic SC : font-family: "Amatic SC", sans-serif; */
+/* --------------------------------------- */
+
+/* 1- section one (the navbar) */
+.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.nav-log {
+    padding: 10px 0;
+}
+
+.nav-log a {
+    color: rgb(33, 37, 41);
+    font-size: 30px;
+    font-family: "system-ui", sans-serif;
+    font-weight: 700;
+}
+
+.nav-menu li {
+    padding: 10px 0;
+}
+
+.nav-menu a {
+    color: grey;
+    font-size: 17px;
+    font-family: "system-ui", sans-serif;
+    font-weight: 600;
+}
+
+.navbar .nav-log a::after {
+    content: ".";
+    color: #CE1212;
+}
+
+.navbar .nav-menu .special-word {
+    color: black;
+}
+
+.navbar .nav-menu a {
+    position: relative;
+}
+
+.navbar .nav-menu .special-word::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+}
+
+.navbar .nav-menu .wo-under:hover {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid red;
+    padding-bottom: 3px;
+}
+
+.mode .fa-solid {
+    color: rgb(33, 37, 41);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+/* navbar-area end -------------------------- */
+
+/* 2- section two (home area) */
+.home {
+    background-color: #EEEEEE;
+}
+
+.home .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 0px;
+
+}
+
+.home-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-picture {
+    margin-top: 30px;
+}
+
+.home-picture img {
+    display: block;
+    width: 90%;
+    filter: drop-shadow(4px 4px 9px #000a);
+    margin-left: 10px;
+}
+
+.home .btn-group {
+    font-family: "system-ui", sans-serif;
+}
+
+.btn-group button {
+    background-color: #E51414;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 0px 100vh 100vh;
+    margin-right: 10px;
+}
+
+.home .btn-group a {
+    color: #000;
+}
+
+.home .btn-group span:hover {
+    color: red;
+}
+
+.home .btn-group i {
+    background-color: white;
+    padding: 10px 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.home .btn-group i:hover {
+    color: red;
+}
+
+.home-content h2 {
+    color: rgb(55, 55, 63);
+    font-family: "Amatic SC", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    color: rgb(79, 79, 90);
+    font-family: "system-ui", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* Image shaking */
+.home-picture img:hover {
+    animation: shake 0.6s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+
+    25% {
+        transform: translate(-4px, -4px) rotate(-4deg);
+    }
+
+    50% {
+        transform: translate(4px, 4px) rotate(4deg);
+    }
+
+    75% {
+        transform: translate(-4px, -4px) rotate(-4deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+
+/* home-area end---------------------------- */
+
+/* 3- section three (chefs-area) */
+.chefs {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.chefs .container {
+    text-align: center;
+}
+
+.chefs .chefs-header {
+    text-align: center;
+}
+
+.chefs .chefs-header .title {
+    padding-top: 50px;
+    color: rgb(127, 127, 144);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.chefs .chefs-header .desc {
+    padding-bottom: 50px;
+    color: rgb(33, 37, 41);
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.chefs .container h3 {
+    color: rgb(33, 37, 41);
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.chefs .container .content span {
+    color: rgb(127, 127, 144);
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.chefs .container p {
+    color: rgb(127, 127, 144);
+    font-family: "system-ui", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.chefs .container p span {
+    color: rgb(206, 18, 18);
+}
+
+.chefs-card img {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.chefs-card .inner-chefs .content {
+    width: 100%;
+    padding: 20px;
+
+}
+
+.chefs-card .inner-chefs {
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 15px 3px rgba(0, 0, 0, 0.1);
+}
+
+.chefs-card {
+    position: relative;
+    transition: transform .5s;
+    overflow: hidden;
+    padding: 20px 0;
+
+}
+
+.chefs-card:hover {
+    transform: scale(1.1);
+}
+
+.chefs-social {
+    background-color: #CEC1B6;
+    width: fit-content;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    transform: translateX(130%);
+    transition: all 1s 1s;
+    opacity: 0;
+
+}
+
+.chefs-card:hover .chefs-social {
+    transform: translateX(-10%);
+    opacity: 1;
+}
+
+.chefs-social li {
+    padding: 10px;
+    color: rgba(55, 55, 63, 0.9);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* chefs-area end-------------------------- */
+
+/* 4- section four (gallary) */
+.gallary {
+    background-color: #EEEEEE;
+    padding: 80px 0;
+}
+
+.gallary .main-tittle {
+    padding-bottom: 30px;
+}
+
+.gallary .main-tittle {
+    text-align: center;
+}
+
+.gallary .gallary-photo .meal-container {
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.gallary .gallary-photo .meal-container img {
+    display: block;
+    width: 100%;
+    transition: transform .5s;
+}
+
+.gallary .gallary-photo .meal-container:hover img {
+    transform: scale(1.1);
+}
+
+.gallary .gallary-photo .layer {
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    transform: translateY(130%);
+    opacity: 0;
+    transition: transform .5s;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallary .gallary-photo .meal-container:hover .layer {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+/* gallary-area(section four) end
+------------------------------------- */
+
+/* 5- section five (contact-area) */
+.contact .container .main-tittle {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.contact iframe {
+    padding-bottom: 25px;
+}
+
+.container .main-tittle h2 {
+    color: rgb(127, 127, 144);
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+.container .main-tittle p {
+    color: rgb(33, 37, 41);
+    font-size: 50px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+}
+
+.adress {
+    padding: 10px 10px;
+}
+
+.details .inner-adress {
+    background-color: #F5F5F5;
+    display: flex;
+    gap: 10px;
+    padding: 30px 10px;
+    align-items: center;
+}
+
+.details .inner-adress i {
+    background-color: #CE1212;
+    color: white;
+    border: solid #CE1212 1px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.contact .details .adress-content h3 {
+    color: rgb(125, 125, 125);
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.contact .details .adress-content p {
+    color: rgb(33, 37, 41);
+    font-family: "system-ui", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*the form */
+.form-contact {
+    margin-top: 20px;
+    margin-bottom: 70px;
+    text-align: center;
+    box-shadow: 0 0 1.875rem #00000014;
+    padding: 20px;
+}
+
+.contact form textarea,
+.ty-subj,
+.ty-name,
+.ty-mail {
+    width: 95%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.main-btn {
+    background-color: #CE1212;
+    border-color: #CE1212;
+    color: #ffffff;
+    margin-top: 15px;
+    padding: 10px 40px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.form-contact .main-btn:hover {
+    background-color: #E61414;
+}
+
+/* contact-area (section five) end
+-------------------------------------- */
+
+/* 6- section six (footer area) */
+
+/* A/about */
+.footer {
+    background-image: url(image5/textured-metal-background.jpg);
+    background-size: cover;
+    padding: 30px 0;
+    color: white;
+    font-family: "system-ui", sans-serif;
+    font-weight: 400;
+}
+
+.footer .about {
+    text-align: center;
+}
+
+.footer .mealify {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.footer .mealify h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.footer .mealify h2::after {
+    content: ".";
+    color: #CE1212;
+}
+
+.footer .mealify img {
+    width: 40px;
+}
+
+.footer .about h3 {
+    border-bottom: solid 2px #ddd6;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer .about ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.footer .about .fa-brands {
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+/* B /subscription */
+.footer .subscription h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer .subscription p {
+    font-family: "system-ui", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.footer .subscrib-input input {
+    width: 60%;
+    padding: 10px;
+}
+
+.footer .subscrib-input .subscrib-btn {
+    background-color: #CE1212;
+    border-color: #CE1212;
+    color: #ffffff;
+    padding: 0 20px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.footer .subscrib-input {
+    margin-bottom: 10px;
+}
+
+.footer .quick-link ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .quick-link .left-li,
+.right-li {
+    font-family: "system-ui", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.quick-link li::before {
+    content: ">";
+}
+
+.footer .left-li,
+.right-li {
+    width: 50%;
+}
+
+/* C/contact-details" */
+.contact-details h3 {
+    margin-bottom: 10px;
+}
+
+.contact-details li {
+    padding: 5px 0;
+}
+
+.contact-details i {
+    color: red;
+    padding-right: 4px;
+}
+
+/*footer area end
+-------------------------------------- */
+
+
+
+
+
+
+
+/********** media quary area ***********/
+/* small devices */
+@media (max-width:767px) {
+
+    /* nav-bar */
+    .navbar .nav-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .navbar .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    /* home */
+    .home .container {
+
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .home .container .home-content {
+        width: 100%;
+    }
+
+    .home .home-content .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-group button {
+        background-color: #E51414;
+        color: white;
+        width: 40%;
+        padding: 12px 0;
+        border-radius: 0px 100vh 100vh;
+    }
+
+    /* footer */
+    .footer .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .footer .about {
+        margin-bottom: 8px;
+    }
+
+    .footer .subscription .subscrib-input input,
+    button {
+        width: 90%;
+        margin: auto;
+    }
+
+    .footer .subscription {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+
+/* meduim devices */
+@media (min-width:768px) {
+
+    /* nav-bar */
+    .navbar .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-menu ul {
+        display: flex;
+    }
+
+    .nav-menu li {
+        padding: 0 15px;
+    }
+
+    /* home */
+    .home .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .home .home-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* chefs */
+    .chefs .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .chefs .chefs-header {
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .chefs .container .chefs-card {
+        width: 30%;
+    }
+
+    /* gallary */
+    /* .gallary .gallary-photo {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .gallary .gallary-photo .Pizza {
+        order: 1;
+    }
+
+    .gallary .gallary-photo .Burger {
+        order: 3;
+        position: relative;
+        bottom: 290px;
+    }
+
+    .gallary .gallary-photo .Levitation-pizza {
+        order: 5;
+    }
+
+    .gallary .gallary-photo .Frittata {
+        order: 7;
+    }
+
+
+.gallary .gallary-photo .Beef-steaks {
+    order: 2;
+}
+
+.gallary .gallary-photo .Crispy {
+    order: 4;
+}
+
+.gallary .gallary-photo .Lyulya-kebab {
+    order: 6;
+} */
+
+    /* contact */
+    .contact .details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .contact .details .adress {
+        padding: 10px;
+    }
+
+    /* form */
+    .input-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .input-group .ty-name,
+    .ty-mail {
+        width: 46%;
+    }
+
+    /* footer */
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .footer .container .about {
+        order: 1;
+    }
+
+    .footer .container .contact-details {
+        order: 2;
+    }
+
+    .footer .container .subscription {
+        order: 3;
+    }
+}
+
+
+
+/* large devices */
+@media (min-width:1024px) {
+
+    .gallary .gallary-photo {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* footer */
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .footer .container .about {
+        order: 1;
+        width: 24%;
+
+    }
+
+    .footer .container .contact-details {
+        order: 3;
+        width: 24%;
+    }
+
+    .footer .container .subscription {
+        order: 2;
+        width: 45%;
+    }
+}
